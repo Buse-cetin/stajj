@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Firma
 
 # Create your views here.
 def index(request):
@@ -18,4 +19,10 @@ def ogrenci(request):
     return render(request, 'ogrenci.html')
 
 def nott(request):
-    return render(request, 'nott.html')
+    firmas = Firma.objects.all()
+
+    content = {
+        "firmas": Firma
+    }
+
+    return render(request, 'nott.html',content)
