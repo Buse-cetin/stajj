@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Öğrenci Bilgi Sistemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lora&display=swap" rel="stylesheet">
+  <style>
+     *{
+        margin: 0;
+        padding: 0;
+         box-sizing: border-box;
+         font-family: 'Lora',sans-serif;
+     }
+     body{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:#1967AA;
+        background-image:url("img/yerleske.jpg");
+        background-size: cover;
+     }
+     .container{
+        position:relative;
+        max-width: 1200px;
+        width: 100%;
+        border-radius: 6px;
+        padding: 30px;
+        margin: 0px 15px;
+        background-color: #18A733;
+     }
+     .container header{
+         font-size: 20px;
+         font-weight: 600;
+         position: relative;
+
+     }
+     .container header::before {
+        content:"";
+         position: absolute;
+         bottom: -2px;
+         left: 0;
+         height: 3px;
+         width: 27px;
+         background-color:#1967AA;
+         border-radius: 8px;
+     }
+     .container form{
+
+         position: relative;
+         margin-top: 16px;
+         min-height: 500px;
+         background-color:#18A733;
+     }
+     .container form .personal-details{
+        margin-top: 30px;
+         
+     }
+     .container form .title{
+         font-size: 16px;
+         font-weight: 500;
+         margin: 6px 0;
+         display: block;
+         margin-bottom: 8px;
+         
+    
+     }
+     .container form .fields{
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap:wrap;
+     }
+     form.fields.input-fields{
+        display: flex;
+        width:calc(100%/3-15px);
+        flex-direction: column;
+        margin: 4px 0;
+
+     }
+     .input-fields input{
+        height: 42px;
+        margin: 8px 0;
+        outline: none;
+        padding: 0 15px;
+        border: 1px solid #1967AA;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+     }
+     .input-fields label{
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+     }
+
+  </style>
+   
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+
+
+   <div class="container ">
+        
+    <header> Öğrenci Bilgileri</header>
+      <form action="#">
+           <div class="form-first">
+             <div class="personal-details">
+                    <span class="title"> Kişisel Bilgiler</span>
+                    <div class="fields">
+
+                        <div class="input-fields">
+                            <label>Ad-Soyad:  </label>
+                              <input type="text" readonly>
+                        </div>
+                        <div class="input-fields">
+                            <label>TC Kimlik No:  </label>
+                              <input type="text" readonly>
+                        </div>
+                        <div class="input-fields">
+                            <label>Doğum Yeri:</label>
+                              <input type="text" readonly>
+                        </div>
+
+                        <div class="input-fields">
+                           <label>Öğrenci No:</label>
+                             <input type="text" readonly>
+                       </div>
+                       <div class="input-fields">
+                           <label>Doğum Tarihi:</label>
+                             <input type="text" readonly>
+                       </div>
+                       <div class="input-fields">
+                           <label>Kayıt Tarihi:</label>
+                             <input type="text" readonly>
+                       </div>
+
+                    </div>
+
+
+
+
+
+             </div>
+             
+                 <br><br>
+             <div class="education-details">
+               <span class="title"> Eğitim Bilgileri</span>
+               <div class="fields">
+
+                   <div class="input-fields">
+                       <label>Fakülte :  </label>
+                         <input type="text" readonly>
+                   </div>
+                   <div class="input-fields">
+                       <label>Bölüm :  </label>
+                         <input type="text" readonly>
+                   </div>
+                   <div class="input-fields">
+                       <label>Sınıf :</label>
+                         <input type="text" readonly>
+                   </div>
+
+                   
+
+               </div>
+               <br><br>
+               <div class="com-details">
+                  <span class="title"> İletişim Bilgileri</span>
+                  <div class="fields">
+   
+                      <div class="input-fields">
+                          <label>Cep Tel :  </label>
+                            <input type="text" readonly>
+                      </div>
+                      <div class="input-fields">
+                          <label>E-posta Adresi :  </label>
+                            <input type="text" readonly>
+                      </div>
+                      <div class="input-fields">
+                          <label>İkamet Adresi :</label>
+                            <input type="text" readonly>
+                      </div>
+   
+                
+
+
+
+
+        </div>
+           </div>
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </form>
+
+
+
+
+
+
+
+
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+       
+</body>
+</html>

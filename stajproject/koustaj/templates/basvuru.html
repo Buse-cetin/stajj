@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staj Başvuru Formu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lora&display=swap" rel="stylesheet">
+
+
+  <style>
+
+body{
+    font-family: 'Lora', sans-serif;
+    background: #1967AA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #18A733, #1967AA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #18A733, #1967AA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  form{
+
+      background-color: white;
+       width: 1100px;
+       margin-left: 200px;
+       margin-right: 30px;
+       margin-top: 30px;
+  }
+  img{
+         height: 100px;
+         width: 100px;
+         align-self: center;
+         margin-top: 70px;
+         margin-left: 120px;
+        }
+      .baslik{
+
+          position: relative;
+          margin-top: -120px;
+          margin-left: -40px;
+          
+      }
+      .tarih{
+         position: relative;
+         margin-top: -80px;
+         margin-right: 80px;
+      }
+     .makam{
+        position: relative;
+         margin-top: 70px;
+         margin-right: 60px;
+         
+     }
+     .tablo1 table {
+    width:1000px;
+    margin:200px auto;
+    height: 80px;
+    line-height: 10px;
+    
+           }
+      .tablo1{
+
+          position:relative;
+        margin-top: -150px;
+      }     
+       .tablo2{
+         position:relative;
+         margin-top: -180px;
+       }
+      #tbl2{
+            width:1000px;
+             margin:200px auto;
+           height: 80px;
+                line-height: 10px;
+           }
+           .tablo3{
+              position: relative;
+              margin-top: -180px;
+  
+           }
+        #tbl3{
+          width:1000px;
+             margin:200px auto;
+           height: 80px;
+                line-height: 10px;
+
+        }
+        .bolum{
+          position: relative;
+         margin-top: -190px;
+         margin-right: 100px;
+         
+        }
+        #tbl4{
+          width:1000px;
+             margin:200px auto;
+           height: 80px;
+                line-height: 10px;
+        }
+        .tablo4{
+          position: relative;
+              margin-top: -180px;
+  
+        }
+        .firmai{
+          position: relative;
+         margin-top: -200px;
+         margin-right: 100px;
+         margin-left: 160px;
+         font-size: 14px;
+        }
+        .bolum2{
+          margin-right: 30px;
+        }
+        #tbl5{
+          width:1050px;
+             margin:200px auto;
+           height: 80px;
+                line-height: 10px;
+        }
+        .son{
+          position: relative;
+              margin-top: -140px;
+              margin-left: 30px;
+             margin-right: 30px;
+             margin-bottom: 50px;
+        }
+        .yazi{
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+        .metin{
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+         button{
+          height: 80px;
+          width: 350px;
+          border-radius: 6px;
+          background-color: yellow;
+          position:absolute;
+          margin-left: 350px;
+          margin-top: -150px;
+          
+
+        }
+        #kaydet{
+          height: 80px;
+          width: 350px;
+          border-radius: 6px;
+          background-color: red;
+          position:absolute;
+          margin-left: 800px;
+          font-size: 20px;
+           
+     
+        }
+        #reset:hover{
+          background-color: rgb(228, 228, 22);
+          cursor: pointer;
+        }
+        #kaydet:hover{
+          background-color: rgb(219, 19, 19);
+          cursor: pointer;
+        }
+        #reset{
+          font-size: 20px;
+          
+        }
+
+  </style>
+</head>
+<body>
+     
+  <form action="#">
+
+    <div align="left">
+        <img src="img/kou.png" >
+      </div>
+
+       <div align="center" class="baslik">
+                 <h5> T.C.</h5>
+          <h4> KOCAELİ ÜNİVERSİTESİ</h4>
+          <h4> TEKNOLOJİ FAKÜLTESİ</h4>
+           <h5> (Staj Başvuru Ve Kabul Formu)</h5>
+       </div>
+     
+         <div class="tarih" align="right">
+            <label for="Tarih">Tarih:</label>
+       <input type="date" id="Tarih" name="Tarih">
+
+         </div>
+       
+          <div align="center" class="makam">
+             <h5><b>
+                İLGİLİ MAKAMA
+             </b></h5>
+          </div>
+           <div class="yazi">
+             <p> Teknoloji Fakültesi   <input type="text"> Mühendisliği Bölümü <input type="text"> numaralı öğrencisiyim.   Kurumunuzda staj yapmamın uygun görülmesi halinde bu formun alttaki kısmını doldurularak fakültemiz ilgili bölüm başkanlığına gönderilmesini saygılarımla arz ederim.
+                    İşyeri uygulaması süresi içerisinde alınan rapor, istirahat vb. belgelerin aslını alınan gün içerisinde bölüm başkanlığına bildireceğimi beyan ve taahhüt ederim.
+                    
+                    </p>
+           </div>
+             
+               <div class="tablo1">
+                  <table border="1">
+
+                    <tr>
+               
+                      <td colspan="5">Ad Soyad:</td>
+                      <td><input type="text" id="ad"></td>
+                       
+                         </tr>
+               
+               <tr>
+               
+             <td colspan="3">T.C kimlik numarası:</td>
+             <td>  <input type="text" id="tc"> </td>
+             <td>Uyruğu:</td>
+             <td><input type="text" id="uyruk"></td>
+                </tr>
+               
+               
+               
+                <tr>
+               
+                  <td colspan="4">Telefon No:</td>
+                  <td>  <input type="text" id="tel"> </td>
+                  <td>E-posta:</td>
+                  <td><input type="text" id="mail"></td>
+                     </tr>
+                    
+                     <tr>
+               
+                      <td>Adres:</td>
+                      <td> İl:</td>
+                      <td> <input type="text" id="il"></td>
+                      <td>İlçe :</td>
+                      <td><input type="text" id="ilce"></td>
+                      <td>Posta Kodu :</td>
+                      <td><input type="text" id="posta"></td>
+
+                         </tr>
+               
+               
+             </table>
+             
+         </div>
+          
+
+         <div class="tablo2">
+          <table id="tbl2" border="1">
+
+            <tr>
+       
+              <td > Staj Bilgileri</td>
+              
+               
+                 </tr>
+       
+       <tr>
+       
+     <td ><label for="satir1"> Staj-1</label> <input type="checkbox" id="satir1"></td>
+     <td ><label for="satir2"> Staj-2</label> <input type="checkbox" id="satir2"></td>
+     <td ><label for="satir3"> IME</label> <input type="checkbox" id="satir3"></td>
+     
+        </tr>
+
+        <tr>
+       
+          <td ><label for="satir4"> Başlangıç Tarihi:</label> <input type="date" id="satir4"></td>
+          <td ><label for="satir5"> Bitiş Tarihi:</label> <input type="date" id="satir5"></td>
+          <td ><label for="satir6"> İş Günü</label> <input type="number" id="satir6"></td>
+          
+             </tr>
+          </table>
+         </div>
+
+             <div class="tablo3">
+              <table id="tbl3" border="1">
+    
+                <tr>
+           
+                  <td > Ailemden,  Kendimden veya  Anne-Baba Üzarinden Genel Sağlık Sigortası Kapsamında Sağlık Hizmeti Alıyorum</td>
+                  <td ><label for="satir7"> Evet</label> <input type="checkbox" id="satir7"></td>
+                  <td ><label for="satir8"> Hayır</label> <input type="checkbox" id="satir8"></td>
+                  
+                  
+                   
+                     </tr>
+                     <tr>
+           
+                      <td > Genel Sağlık Sigortası (GSS) (Gelir Testi Yaptırdım Pirim Ödüyorum)</td>
+                      <td ><label for="satir9"> Evet</label> <input type="checkbox" id="satir9"></td>
+                      <td ><label for="satir10"> Hayır</label> <input type="checkbox" id="satir10"></td>
+                      
+                      
+                       
+                         </tr>
+                         <tr>
+           
+                          <td > 25 Yaşını Doldurdum</td>
+                          <td ><label for="satir11"> Evet</label> <input type="checkbox" id="satir11"></td>
+                          <td ><label for="satir12"> Hayır</label> <input type="checkbox" id="satir12"></td>
+                          
+                          
+                           
+                             </tr>
+              </table>
+             </div>
+
+              <div class="bolum" align="right">
+                <label for="satir"> Ad Soyad:</label> <input type="text">
+                <br>
+                <label for="imza" style="margin: 190px;" > İmza:                </label>
+                 
+              </div>
+               <br>
+              <div class="tablo4">
+                  <table id="tbl4" border="1">
+                      <tr>
+                        <td colspan="7"> Staj Yapılacak Kurum Bilgileri</td>
+                      </tr>
+                      <tr>
+               
+                        <td colspan="6">Resmi Adı:</td>
+                        <td><input type="text" id="kurumad"></td>
+                         
+                           </tr>
+                           <tr>
+               
+                            <td colspan="6">Faaliyet Alanı:</td>
+                            <td><input type="text" id="faaliyet"></td>
+                             
+                               </tr>
+                               <tr>
+               
+                                <td>Adres:</td>
+                                <td> İl:</td>
+                                <td> <input type="text" id="ill"></td>
+                                <td>İlçe :</td>
+                                <td><input type="text" id="ilcee"></td>
+                                <td>Posta Kodu :</td>
+                                <td><input type="text" id="postaa"></td>
+          
+                                   </tr>
+                                   <tr>
+               
+                                    <td>İletişim Bilgileri:</td>
+                                    <td> Telefon:</td>
+                                    <td> <input type="text" id="tell"></td>
+                                    <td>Fax :</td>
+                                    <td><input type="text" id="fax"></td>
+                                    <td>E-posta :</td>
+                                    <td><input type="text" id="maill"></td>
+              
+                                       </tr>
+
+                                       <tr>
+                                        <td colspan="4"><label for="sat">Staj Sorumlusunun Ünvanı:</label></td>
+                                        <td ><label for="sat1">Mühendis</label> <input type="checkbox" id="sat1"></td>
+                                        <td ><label for="sat2"> Teknik Öğretmen</label> <input type="checkbox" id="sat2"></td>
+                                        <td ><label for="sat3"> Hekim</label> <input type="checkbox" id="sat3"></td>
+                                        
+                                           </tr>
+                                           <tr>
+           
+                                            <td colspan="5" > Kurum olarak 3308 sayılı kanundaki devlet katkısından yararlanmak istiyor musunuz?</td>
+                                            <td ><label for="sat4"> Evet</label> <input type="checkbox" id="sat4"></td>
+                                            <td ><label for="sat5"> Hayır</label> <input type="checkbox" id="sat5"></td>
+                                            
+                                            
+                                             
+                                               </tr>
+                                </table>
+
+
+
+                  </table>
+
+
+              </div>
+
+               <div class="firmai">
+                  <p>Yukarıda adı geçen öğrencinin ilgili tarihlerde staj uygulamasını kurumumuzda yapması uygun görülmüştür.</p>
+               </div>
+           
+               <div class="bolum2" align="right">
+                <label for="satir"> Firma Yetkilisinin Adı Soyadı :</label> <input type="text">
+                <br>
+                <label for="satir"> Ünvanı :</label> <input type="text">
+                <br>
+                <label for="imza" style="margin: 190px;" > Kaşe ve İmza:                </label>
+               
+                    <br><br>
+                 
+              </div>
+              <div class="metin" align="center"> 
+                 <p style="font-size:10px;"> 
+                  *3308 sayılı Meslekî Eğitim Kanunu ve 5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanununun 5 inci maddesinin (b) bendi gereğince zorunlu staja tabi tüm öğrencilere "İş Kazası ve Meslek Hastalığı Sigortası" yapılması ve sigorta primlerinin Üniversite tarafından ödenmesi gerekmektedir.  Staj süresi boyunca üniversitemiz tarafından öğrencimizin SGK’ya kaydı yaptırılacaktır.
+
+                  **Staja SGK sicil numarası alındıktan sonra başlayacaktır. Farklı firmalarda yapılacak stajlar için ayrı form doldurulacaktır. Öğrenci bu evraktan 2 nüsha düzenleyip firmaca onaylandıktan sonra bir tanesini belirlenen staj döneminden en az 1 ay önce ilgili bölüm başkanlığına teslim etmek zorundadır.
+                  
+                  *** Yanıtınız Evet ise Ek-1 formunu doldurunuz.
+                  
+                 </p>
+              </div>
+
+              <div class="son">
+                 <table border="1" id="tbl5">
+
+                    <tr>
+                       <td style="font-size: 14px;">T.C. Kocaeli Üniversitesi Teknoloji Fakültesi 
+                        Bölüm İş Yeri ve Staj Komisyonu Onayı	
+                       
+                          
+                        </td>
+                       <td style="font-size: 14px;"> Yukarıda adı geçen öğrencinin ilgili tarihlerde 
+                        staj uygulamasını ilgili kurumda yapması; 
+                        Uygundur                               Uygun Değildir</td>
+                       <td>ONAY</td>
+                    </tr>
+
+                </table>
+              </div>
+
+
+
+
+                
+  </form>
+         
+        <button type="button" id="reset"> <i class="fa fa-trash  fa-3x" aria-hidden="true" ></i></i><b>FORMU TEMİZLE</b></button>
+     
+        <button type="button" id="kaydet"><i class="fa fa-file-pdf-o fa-3x" aria-hidden="true" ></i><b>KAYDET (PDF)</b></button>
+      
+
+</body>
+</html>
