@@ -9,7 +9,6 @@ class Firma(models.Model):
     posta_kodu =  models.IntegerField(blank=True, null=True)
     telefon = models.IntegerField(blank=True, null=True)
     #tel = models.models.PhoneNumberField(_(""))
-
     fax = models.IntegerField(blank=True, null=True)
     eposta = models.EmailField()
     unvan = models.CharField(max_length=50)
