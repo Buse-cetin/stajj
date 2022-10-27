@@ -8,7 +8,7 @@ class Firma(models.Model):
     ilçe = models.CharField(max_length=50)
     posta_kodu =  models.IntegerField(blank=True, null=True)
     telefon = models.IntegerField(blank=True, null=True)
-    #fax = 
+    fax = models.IntegerField(blank=True, null=True)
     eposta = models.EmailField()
     unvan = models.CharField(max_length=50)
     devlet_katkisi= models.BooleanField(default=False)
