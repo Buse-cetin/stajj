@@ -24,7 +24,7 @@ class OgrenciBilgi(models.Model):
     ogrenci_soyad = models.CharField(max_length=50)
     ogrenci_eposta = models.EmailField()
     ogrenci_telefon =  models.IntegerField(blank=True, null=True)
-    #ogrenci_sifre = 
+    #ogrenci_sifre = ağlamak
     ogrenci_fakülte = models.CharField(max_length=50)
     ogrenci_bölüm = models.CharField(max_length=50)
     ogrenci_sinif =  models.IntegerField(blank=True, null=True)
