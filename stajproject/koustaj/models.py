@@ -25,6 +25,9 @@ class Firma(models.Model):
 
 class Degerlendirme(models.Model):
     degerlendirme = models.BooleanField("Değerlendirme",default=False)
+    staj_basvuru = models.BooleanField("Staj Başvuru Formu",default=False)
+    staj_rapor = models.BooleanField("Staj Raporu",default=False)
+    staj_degerlendirme = models.BooleanField("Staj Değerlendirme Formu",default=False)
 
     class Meta:
         verbose_name = "Değerlendirme"

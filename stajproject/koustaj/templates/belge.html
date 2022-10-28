@@ -208,7 +208,15 @@ label {
                      id="dosya" name="dosya"
                     >
               </td>
-             <td>#</td>
+             <td>
+              <ul>
+                {% for Degerlendirme in degerlendirmes %}
+                    <li>
+                        {{ Degerlendirme.staj_basvuru }}
+                    </li>
+                {% endfor %}
+            </ul>
+             </td>
           </tr>
           <tr>
             <td>2</td>
@@ -218,7 +226,15 @@ label {
               <input type="file"
                      id="dosya" name="dosya"
                     ></td>
-            <td>#</td>
+            <td>
+              <ul>
+                {% for Degerlendirme in degerlendirmes %}
+                    <li>
+                        {{ Degerlendirme.staj_rapor }}
+                    </li>
+                {% endfor %}
+            </ul>
+            </td>
          </tr>
          <tr>
             <td>3</td>
@@ -228,7 +244,15 @@ label {
               <input type="file"
                      id="dosya" name="dosya"
                     ></td>
-            <td>#</td>
+            <td>
+              <ul>
+                {% for Degerlendirme in degerlendirmes %}
+                    <li>
+                        {{ Degerlendirme.staj_degerlendirme }}
+                    </li>
+                {% endfor %}
+            </ul>
+            </td>
          </tr>
          
        </tbody>

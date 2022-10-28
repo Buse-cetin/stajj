@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Firma
+from .models import Firma, OgrenciBasvuru, Degerlendirme
 
 # Create your views here.
 def index(request):
@@ -13,7 +13,8 @@ def basvuru(request):
     return render(request, 'basvuru.html')
 
 def belge(request):
-    return render(request, 'belge.html')
+    degerlendirmes = Degerlendirme.objects.all()
+    return render(request, 'belge.html',{'degerlendirmes':degerlendirmes})
 
 def ogrenci(request):
     return render(request, 'ogrenci.html')
@@ -23,4 +24,5 @@ def login(request):
 
 def nott(request):
     firmas = Firma.objects.all()
-    return render(request, 'nott.html',{'firmas':firmas})
+    ogrencis = OgrenciBasvuru.objects.all()
+    return render(request, 'nott.html',{'firmas':firmas},{'ogrencis':ogrencis} )
