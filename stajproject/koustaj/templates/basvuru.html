@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,19 +19,21 @@
 
 body{
     font-family: 'Lora', sans-serif;
-    background: #1967AA;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #18A733, #1967AA);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #18A733, #1967AA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background-color: white;
+ 
   }
 
   form{
 
       background-color: white;
        width: 1100px;
-       margin-left: 200px;
+       margin-left: 320px;
        margin-right: 30px;
        margin-top: 30px;
+       border-style:groove;
+       border-width: 2px;
+       border-color: black;
+       height: 1400px;
   }
   img{
          height: 100px;
@@ -143,10 +146,12 @@ background: linear-gradient(to right, #18A733, #1967AA); /* W3C, IE 10+/ Edge, F
           height: 80px;
           width: 350px;
           border-radius: 6px;
-          background-color: yellow;
-          position:absolute;
-          margin-left: 350px;
-          margin-top: -150px;
+          background-color: white;
+          position:relative;
+          margin-left: 400px;
+         
+          margin-top: 20px;
+          margin-bottom: 40px;
           
 
         }
@@ -154,16 +159,19 @@ background: linear-gradient(to right, #18A733, #1967AA); /* W3C, IE 10+/ Edge, F
           height: 80px;
           width: 350px;
           border-radius: 6px;
-          background-color: red;
+          background-color:white;
           position:absolute;
-          margin-left: 800px;
+          margin-left: 200px;
+          margin-right: -50px;
           font-size: 20px;
-           
+          margin-top: 20px;
+          margin-bottom: 40px;
      
         }
         #reset:hover{
-          background-color: rgb(228, 228, 22);
+          background-color:rgb(245, 245, 37);
           cursor: pointer;
+          
         }
         #kaydet:hover{
           background-color: rgb(219, 19, 19);
@@ -174,10 +182,77 @@ background: linear-gradient(to right, #18A733, #1967AA); /* W3C, IE 10+/ Edge, F
           
         }
 
+        .side-menu{
+    position:fixed;
+    background: #1967AA;
+    width: 285px;
+    height:150%;
+    margin-top: -50px;
+    margin-left: -10px;
+
+}
+.side-menu center img{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin-top: 60px;
+  border:3px solid white;
+  margin-left: 10px;
+
+  
+}
+.side-menu center h2{
+    color:white;
+
+}
+.side-menu a{
+ display:block;
+ transition:0.5s;
+ line-height: 70px;
+ color:white;
+ padding-left: 20px;
+ font-family: 'Lora',sans-serif;
+ 
+
+}
+.side-menu a:hover{
+     padding-left: 40px;
+     background: #18A733;
+}
+.side-menu span {
+
+    font-size:20px;
+    margin-left: 10px;
+    color:white;
+    
+
+}
+
+   
+
+
   </style>
 </head>
 <body>
      
+  <div class="side-menu">
+    <center>
+      <img src="img/kou.png"> 
+      <br><br>
+      <br>
+      <h2> KOÜ </h2>
+    </center>
+    <br>
+ 
+     <a href="ogrenci.html" ><i class="fa fa-user"></i><span> Öğrenci Bilgileri</span> </a>
+     <a href="basvuru.html" ><i class="fa fa-clipboard"></i><span> Staj Başvurusu</span> </a>
+     <a href="belge.html" ><i class="fa fa-cloud-download"></i><span> Belge Yükleme</span> </a>
+     <a href="not.html"><i class="	fa fa-bar-chart"></i><span> Staj Not Takibi</span> </a>
+     <a href="anasayfa.html"><i class="	fa fa-home "></i><span> Anasayfa </span> </a>
+     <a href="#"><i class="fa fa-power-off" class="Logout"></i><span> Çıkış Yap</span> </a>
+ 
+  </div>
+  
   <form action="#">
 
     <div align="left">
