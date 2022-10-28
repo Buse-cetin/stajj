@@ -9,5 +9,6 @@ urlpatterns = [
     path("belge.html", views.belge ),
     path("nott.html", views.nott),
     path("ogrenci.html", views.ogrenci ),
+    path("login.html", views.login),
     
 ]

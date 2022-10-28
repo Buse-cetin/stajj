@@ -18,6 +18,9 @@ def belge(request):
 def ogrenci(request):
     return render(request, 'ogrenci.html')
 
+def login(request):
+    return render(request, 'login.html')
+
 def nott(request):
     firmas = Firma.objects.all()
 
