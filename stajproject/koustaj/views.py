@@ -23,9 +23,4 @@ def login(request):
 
 def nott(request):
     firmas = Firma.objects.all()
-
-    content = {
-        "firmas": Firma
-    }
-
-    return render(request, 'nott.html',content)
+    return render(request, 'nott.html',{'firmas':firmas})
