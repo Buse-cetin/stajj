@@ -17,12 +17,12 @@ def belge(request):
     return render(request, 'belge.html',{'degerlendirmes':degerlendirmes})
 
 def ogrenci(request):
-    return render(request, 'ogrenci.html')
+    ogrencis = OgrenciBasvuru.objects.all()
+    return render(request, 'ogrenci.html',{'ogrencis':ogrencis} )
 
 def login(request):
     return render(request, 'login.html')
 
 def nott(request):
     firmas = Firma.objects.all()
-    ogrencis = OgrenciBasvuru.objects.all()
-    return render(request, 'nott.html',{'firmas':firmas},{'ogrencis':ogrencis} )
+    return render(request, 'nott.html',{'firmas':firmas} )

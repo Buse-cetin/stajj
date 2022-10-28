@@ -164,9 +164,33 @@
         </thead>
         <tbody>
            <tr>
-              <td>#</td>
-              <td>#</td>
-              <td>#</td>
+              <td>
+                <ul>
+                  {% for Firma in firmas %}
+                      <li>
+                          {{ Firma.firma_adi }}
+                      </li>
+                  {% endfor %}
+              </ul>
+              </td>
+              <td>
+                <ul>
+                  {% for Firma in firmas %}
+                      <li>
+                          {{ Firma.adres}}
+                      </li>
+                  {% endfor %}
+              </ul>
+              </td>
+              <td>
+                <ul>
+                  {% for Firma in firmas %}
+                      <li>
+                          {{ Firma.oBasvuru.is_gunu }}
+                      </li>
+                  {% endfor %}
+              </ul>
+              </td>
            </tr>
           
         </tbody>
@@ -187,23 +211,37 @@
         <thead>
             <tr>
               <th> Staj Türü</th>
-              <th> Başarı Notu</th>
               <th> Durum </th>
               
             </tr>
         </thead>
         <tbody>
            <tr>
-              <td>#</td>
-              <td>#</td>
-              <td>#</td>
+              <td>
+                <ul>
+                  {% for Firma in firmas %}
+                      <li>
+                          {{ Firma.oBasvuru.staj_tur}}
+                      </li>
+                  {% endfor %}
+              </ul>
+              </td
+              <td>
+                <ul>
+                  {% for Firma in firmas %}
+                      <li>
+                          {{ Firma.Firma.oBasvuru.oDegerlendirme }}
+                      </li>
+                  {% endfor %}
+              </ul>
+              </td>
            </tr>
           
         </tbody>
           
         <tfoot>
            <tr>
-               <td colspan="3"> </td>
+               <td colspan="2"> </td>
            </tr>
           
           </tfoot>
