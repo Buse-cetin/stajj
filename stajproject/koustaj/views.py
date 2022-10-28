@@ -26,3 +26,21 @@ def login(request):
 def nott(request):
     firmas = Firma.objects.all()
     return render(request, 'nott.html',{'firmas':firmas} )
+
+def anasayfaOgretmen(request):
+    return render(request, 'anasayfaOgretmen.html')
+
+def basvurularOgretmen(request):
+    return render(request, 'basvurularOgretmen.html')
+
+def kbasvurular(request):
+    return render(request, 'kbasvurular.html')
+
+def kbasvurulistele(request):
+    return render(request, 'kbasvurulistele.html')
+
+def kullanıcı(request):
+    return render(request, 'kullanıcı.html')
+
+def sifre(request):
+    return render(request, 'sifre.html')

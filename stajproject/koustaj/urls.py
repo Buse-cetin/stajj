@@ -10,5 +10,11 @@ urlpatterns = [
     path("nott.html", views.nott),
     path("ogrenci.html", views.ogrenci ),
     path("login.html", views.login),
+    path("anasayfaOgretmen.html", views.anasayfaOgretmen ),
+    path("basvurularOgretmen.html", views.basvurularOgretmen ),
+    path("kbasvurular.html", views.kbasvurular),
+    path("kbasvurulistele.html", views.kbasvurulistele),
+    path("kullanıcı.html", views.kullanıcı ),
+    path("sifre.html", views.sifre),
     
 ]
