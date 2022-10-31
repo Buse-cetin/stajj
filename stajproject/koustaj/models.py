@@ -31,6 +31,8 @@ class OgrenciBilgi(models.Model):
     ogrenci_dogum_yeri = models.CharField("Doğum Yeri",max_length=50)
     ogrenci_kayıt_tarihi = models.DateField("Öğren Kayıt Tarihi", )
     ogrenci_tcno =  models.IntegerField("TC",blank=True, null=True)
+    basvuru_dosyası = models.BooleanField("Başvuru Dosyası",default=False)
+    odegerlendirme = models.ForeignKey(Degerlendirme, on_delete=models.CASCADE, null=True)
    # oFirma = models.ForeignKey(Firma, on_delete=models.CASCADE, null=True)
 
     def __str__(self):

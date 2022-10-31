@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tümbaşvurular.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <body id="body-pd">
+        <header class="header" id="header">
+            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+            <h2 style="color:darkgreen;">STAJ BAŞVURU SİSTEMİ/Öğretmen</h2>
+            <div class="header_img"> <img src="./images/WhatsApp Image 2022-10-26 at 22.47.54.jpeg" alt=""> </div>
+        </header>
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div> <a  href="anasayfa.html" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">ANASAYFA</span> </a>
+                        
+                    <div class="nav_list">
+                        <a href="../Başvurular/başvurular.html" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">BAŞVURULAR</span> </a>
+                         <a href="../Listele/listele.html" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">LİSTELE</span> </a>
+                         <a href="../Tümbaşvurular/tümbaşvurular.html" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">TÜM BAŞVURULAR</span> </a>
+                         <a href="../Tümünülistele/tümünülistele.html" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">TÜMÜNÜ LİSTELE</span> </a> 
+                         <a href="../Kullanıcı/kullanıcı.html" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">KULLANICI BİLGİLERİ</span> </a>
+                         <a href="../Şifre/şifre.html" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">ŞİFRE DEĞİŞTİR</span> </a> </div>
+                </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">ÇIKIŞ</span> </a>
+            </nav>
+        </div> 
+        <div class="height-100 bg-light">
+        <div style="padding-left:20px ;padding-top:80px ;">
+            <table style="width: 100%;">
+                <tr  style="border: solid 2px black;" >
+                    <th style="text-align:left ;">Öğrenci No</th>
+                    <th style="text-align:left ;">Öğrenci Ad </th>
+                    <th style="text-align:left ;">Öğrenci Soyad </th>
+                    <th style="text-align:left ;">Başvuru Dosyası</th>
+                    <th style="text-align:left ;">Atanacak Öğretmen</th>
+                    <th style="text-align:left ;">SEÇENEK</th>
+                </tr>
+                
+                  <tr>
+                    <td>
+                        <ul>
+                            {% for OgrenciBilgi in ogrenciz %}
+                                <li>
+                                    {{ OgrenciBilgi.ogrenci_no }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for OgrenciBilgi in ogrenciz %}
+                                <li>
+                                    {{ OgrenciBilgi.ogrenci_ad }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for OgrenciBilgi in ogrenciz %}
+                                <li>
+                                    {{ OgrenciBilgi.ogrenci_soyad }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for OgrenciBilgi in ogrencis %}
+                                <li>
+                                    {{ OgrenciBilgi.basvuru_dosyası }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td><form action="#">
+                        <input type="text">
+                    </form></td>
+                    <td><button style="color: #18A733;" type="button">ONAYLA</button></td>
+                    <td><button style="color:firebrick" type="button">REDDET</button></td>
+                    <td><button style="color:rgb(47, 26, 183)" type="button">SİL</button></td>
+
+                </table>
+                <div style="padding-left:1300px;padding-top:30px">
+                    <table  >
+                        <tr>
+                            <td>
+                               
+                                <button  style="background-color: rgb(14, 175, 14);color: white;" type="button">KAYDET</button>
+                                
+                              
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--Container Main end-->
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="tümbaşvurular.js"></script>
+
+
+
+
+
+
+</body>
+</html>
