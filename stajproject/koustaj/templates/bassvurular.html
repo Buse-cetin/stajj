@@ -1,12 +1,14 @@
-<html lang="en">
+{%load static %}
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="tümbaşvurular.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/changelists.css">
+    <link rel="stylesheet" href="{% static 'css/bassvurular.css'%}">
 </head>
 <body>
     <body id="body-pd">
@@ -29,22 +31,21 @@
                 </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">ÇIKIŞ</span> </a>
             </nav>
         </div> 
-        <div class="height-100 bg-light">
-        <div style="padding-left:20px ;padding-top:80px ;">
+        <!--Container Main start-->
+        <div style="padding-left:30px ;padding-top:100px ;">
             <table style="width: 100%;">
-                <tr  style="border: solid 2px black;" >
-                    <th style="text-align:left ;">Öğrenci No</th>
-                    <th style="text-align:left ;">Öğrenci Ad </th>
-                    <th style="text-align:left ;">Öğrenci Soyad </th>
-                    <th style="text-align:left ;">Başvuru Dosyası</th>
-                    <th style="text-align:left ;">Atanacak Öğretmen</th>
-                    <th style="text-align:left ;">SEÇENEK</th>
-                </tr>
+                    <tr style="border: solid 2px black;" >
+                        <th style="text-align:left ;">Öğrenci No</th>
+                        <th style="text-align:left ;">Öğrenci Ad </th>
+                        <th style="text-align:left ;">Öğrenci Soyad </th>
+                        <th style="text-align:left ;">Başvuru Dosyası</th>
+                        <th style="text-align:left ;">Değerlendirme</th>
+                    </tr>
                 
                   <tr>
                     <td>
                         <ul>
-                            {% for OgrenciBilgi in ogrenciz %}
+                            {% for OgrenciBilgi in ogrencis %}
                                 <li>
                                     {{ OgrenciBilgi.ogrenci_no }}
                                 </li>
@@ -53,7 +54,7 @@
                     </td>
                     <td>
                         <ul>
-                            {% for OgrenciBilgi in ogrenciz %}
+                            {% for OgrenciBilgi in ogrencis %}
                                 <li>
                                     {{ OgrenciBilgi.ogrenci_ad }}
                                 </li>
@@ -62,7 +63,7 @@
                     </td>
                     <td>
                         <ul>
-                            {% for OgrenciBilgi in ogrenciz %}
+                            {% for OgrenciBilgi in ogrencis %}
                                 <li>
                                     {{ OgrenciBilgi.ogrenci_soyad }}
                                 </li>
@@ -78,40 +79,81 @@
                             {% endfor %}
                         </ul>
                     </td>
-                    <td><form action="#">
-                        <input type="text">
-                    </form></td>
-                    <td><button style="color: #18A733;" type="button">ONAYLA</button></td>
-                    <td><button style="color:firebrick" type="button">REDDET</button></td>
-                    <td><button style="color:rgb(47, 26, 183)" type="button">SİL</button></td>
-
-                </table>
-                <div style="padding-left:1300px;padding-top:30px">
-                    <table  >
-                        <tr>
-                            <td>
+                    <td>
+                            <select  id="stajtipinegöre">
+                                <option style="text-decoration-style:lara ;">Değerlendir</option>
+                                <option>BAŞARILI</option>
+                                <option>BAŞARISIZ</option>
+                                <option>EKSİK</option>
                                
-                                <button  style="background-color: rgb(14, 175, 14);color: white;" type="button">KAYDET</button>
-                                
-                              
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                            </select>
+                    </td>
+                </table>
             </div>
+            <div style="padding-left:1300px;padding-top:30px">
+            <table  >
+                <tr>
+                    <td>                     
+                        <button  style="background-color: rgb(14, 175, 14);color: white;" type="button">KAYDET</button>
+                    </td>
+                </tr>
+            </table>
         </div>
-        <!--Container Main end-->
+        <div id="changelist-filter">
+            <h2>Süz</h2>
+            <h3 id="changelist-filter-clear">
+              <a href="?">&#10006; Tüm süzgeçleri temizle</a>
+            </h3>
+            
+<h3> Başarılı</h3>
+<ul>
 
+    <li class="selected">
+    <a href="?is_superuser__exact=0" title="Tümü">Tümü</a></li>
 
+    <li>
+    <a href="?is_staff__exact=1&amp;is_superuser__exact=0" title="Evet">Evet</a></li>
 
+    <li>
+    <a href="?is_staff__exact=0&amp;is_superuser__exact=0" title="Hayır">Hayır</a></li>
+
+</ul>
+
+<h3> Başarısız</h3>
+<ul>
+
+    <li>
+    <a href="?" title="Tümü">Tümü</a></li>
+
+    <li>
+    <a href="?is_superuser__exact=1" title="Evet">Evet</a></li>
+
+    <li class="selected">
+    <a href="?is_superuser__exact=0" title="Hayır">Hayır</a></li>
+
+</ul>
+
+<h3> Eksik</h3>
+<ul>
+
+    <li class="selected">
+    <a href="?is_superuser__exact=0" title="Tümü">Tümü</a></li>
+
+    <li>
+    <a href="?is_active__exact=1&amp;is_superuser__exact=0" title="Evet">Evet</a></li>
+
+    <li>
+    <a href="?is_active__exact=0&amp;is_superuser__exact=0" title="Hayır">Hayır</a></li>
+
+</ul>
+          </div>
+    </div>
+  </div>
+       </div>
+        
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="tümbaşvurular.js"></script>
-
-
-
-
-
-
+        <script src="{% static 'js/bassvurular.js'%}"></script>
 </body>
 </html>

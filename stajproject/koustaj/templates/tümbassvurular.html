@@ -1,12 +1,14 @@
-<html lang="en">
+{%load static %}
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="başvurular.css">
+    <link rel="stylesheet" href="tümbaşvurular.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="{% static 'css/tümbassvurular.css'%}">
 </head>
 <body>
     <body id="body-pd">
@@ -29,21 +31,22 @@
                 </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">ÇIKIŞ</span> </a>
             </nav>
         </div> 
-        <!--Container Main start-->
-        <div style="padding-left:30px ;padding-top:100px ;">
+        <div class="height-100 bg-light">
+        <div style="padding-left:20px ;padding-top:80px ;">
             <table style="width: 100%;">
-                    <tr style="border: solid 2px black;" >
-                        <th style="text-align:left ;">Öğrenci No</th>
-                        <th style="text-align:left ;">Öğrenci Ad </th>
-                        <th style="text-align:left ;">Öğrenci Soyad </th>
-                        <th style="text-align:left ;">Başvuru Dosyası</th>
-                        <th style="text-align:left ;">Değerlendirme</th>
-                    </tr>
+                <tr  style="border: solid 2px black;" >
+                    <th style="text-align:left ;">Öğrenci No</th>
+                    <th style="text-align:left ;">Öğrenci Ad </th>
+                    <th style="text-align:left ;">Öğrenci Soyad </th>
+                    <th style="text-align:left ;">Başvuru Dosyası</th>
+                    <th style="text-align:left ;">Atanacak Öğretmen</th>
+                    <th style="text-align:left ;">SEÇENEK</th>
+                </tr>
                 
                   <tr>
                     <td>
                         <ul>
-                            {% for OgrenciBilgi in ogrencis %}
+                            {% for OgrenciBilgi in ogrenciz %}
                                 <li>
                                     {{ OgrenciBilgi.ogrenci_no }}
                                 </li>
@@ -52,7 +55,7 @@
                     </td>
                     <td>
                         <ul>
-                            {% for OgrenciBilgi in ogrencis %}
+                            {% for OgrenciBilgi in ogrenciz %}
                                 <li>
                                     {{ OgrenciBilgi.ogrenci_ad }}
                                 </li>
@@ -61,7 +64,7 @@
                     </td>
                     <td>
                         <ul>
-                            {% for OgrenciBilgi in ogrencis %}
+                            {% for OgrenciBilgi in ogrenciz %}
                                 <li>
                                     {{ OgrenciBilgi.ogrenci_soyad }}
                                 </li>
@@ -77,28 +80,27 @@
                             {% endfor %}
                         </ul>
                     </td>
-                    <td>
-                            <select  id="stajtipinegöre">
-                                <option style="text-decoration-style:lara ;">Değerlendir</option>
-                                <option>BAŞARILI</option>
-                                <option>BAŞARISIZ</option>
-                                <option>EKSİK</option>
-                               
-                            </select>
-                    </td>
+                    <td><form action="#">
+                        <input type="text">
+                    </form></td>
+                    <td><button style="color: #18A733;" type="button">ONAYLA</button></td>
+                    <td><button style="color:firebrick" type="button">REDDET</button></td>
+                    <td><button style="color:rgb(47, 26, 183)" type="button">SİL</button></td>
+
                 </table>
+                <div style="padding-left:1300px;padding-top:30px">
+                    <table  >
+                        <tr>
+                            <td>
+                               
+                                <button  style="background-color: rgb(14, 175, 14);color: white;" type="button">KAYDET</button>
+                                
+                              
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div style="padding-left:1300px;padding-top:30px">
-            <table  >
-                <tr>
-                    <td>                     
-                        <button  style="background-color: rgb(14, 175, 14);color: white;" type="button">KAYDET</button>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        </div>
-        
         </div>
         <!--Container Main end-->
 
@@ -106,7 +108,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="başvurular.js"></script>
+        <script src="{% static 'js/tümbassvurular.js'%}"></script>
 
 
 

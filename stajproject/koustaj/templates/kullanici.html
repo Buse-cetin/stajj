@@ -1,4 +1,5 @@
-<html lang="en">
+{%load static %}
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="kullanıcı.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="{% static 'css/kullanici.css'%}">
 </head>
 <body>
     <body id="body-pd">
@@ -34,24 +36,77 @@
             <div style="padding-left:50px ;padding-top:170px ;padding-right: 350px;width:80% ;">
                 <table style="width: 100%; border-block-color: black; ">
                     <tr style="font-size:x-large;height:70px;padding-left:10px;border:solid black;">
-                        <td  >AD-SOYAD: </td>
-                        <td >serdar solak</td>
-            
+                        <td  >AD: </td>
+                        <td>
+                            <ul>
+                              {% for Ogretmen in ogretmens %}
+                                  <li>
+                                      {{ Ogretmen.ogretmen_ad }}
+                                  </li>
+                              {% endfor %}
+                            </ul>
+                          </td>
                     </tr>
                     <tr border:solid black;>
-                        <td>TC:</td> 
-                        <td>1234567890</td>
+                        <td>Soyad: </td>
+                        <td>
+                            <ul>
+                              {% for Ogretmen in ogretmens %}
+                                  <li>
+                                      {{ Ogretmen.ogretmen_soyad }}
+                                  </li>
+                              {% endfor %}
+                            </ul>
+                          </td>
+                        </tr>
+                    <tr border:solid black;>
+                        <td>Sicil No:</td> 
+                        <td>
+                            <ul>
+                              {% for Ogretmen in ogretmens %}
+                                  <li>
+                                      {{ Ogretmen.sicil_no }}
+                                  </li>
+                              {% endfor %}
+                            </ul>
+                          </td>
                         
                     </tr>
                     <tr style="border:solid black;">
                         <td>FAKÜLTE:</td>
-                        <td>bilişim sistemleri mühendisliği</td>
-            
-            
+                        <td>
+                            <ul>
+                              {% for Ogretmen in ogretmens %}
+                                  <li>
+                                      {{ Ogretmen.ogretmen_fakulte }}
+                                  </li>
+                              {% endfor %}
+                            </ul>
+                          </td>
+                    </tr>
+                    <tr style="border:solid black;">
+                        <td>BÖLÜM:</td>
+                        <td>
+                            <ul>
+                              {% for Ogretmen in ogretmens %}
+                                  <li>
+                                      {{ Ogretmen.ogretmen_bolum }}
+                                  </li>
+                              {% endfor %}
+                            </ul>
+                          </td>
                     </tr>
                     <tr style="border:solid black;">
                         <td>E-POSTA:</td>
-                        <td>serdarsolak@gmail.com</td>
+                        <td>
+                            <ul>
+                              {% for Ogretmen in ogretmens %}
+                                  <li>
+                                      {{ Ogretmen.ogretmen_bolum }}
+                                  </li>
+                              {% endfor %}
+                            </ul>
+                          </td>
                     </tr>
                     <tr style="border:solid black;">
                         <td>TELEFON:</td>
@@ -71,8 +126,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="kullanıcı.js"></script>
-
+        <script src="{% static 'js/kullanici.js'%}"></script>
 
 
 

@@ -11,9 +11,9 @@ urlpatterns = [
     path("ogrenci.html", views.ogrenci ),
     path("login.html", views.login),
     path("anasayfaO.html", views.anasayfaO ),
-    path("başvurular.html", views.başvurular ),
-    path("tümbaşvurular.html", views.tümbaşvurular),
-    path("kullanıcı.html", views.kullanıcı ),
-    path("şifre.html", views.şifre),
+    path("bassvurular.html", views.bassvurular ),
+    path("tümbassvurular.html", views.tümbassvurular),
+    path("kullanici.html", views.kullanici ),
+    path("sifre.html", views.sifre),
     
 ]

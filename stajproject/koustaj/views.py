@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Firma, OgrenciBasvuru, Degerlendirme,OgrenciBilgi
+from .models import Firma, OgrenciBasvuru, Degerlendirme,OgrenciBilgi,Ogretmen
 
 # Create your views here.
 def index(request):
@@ -30,17 +30,18 @@ def nott(request):
 def anasayfaO(request):
     return render(request, 'anasayfaO.html')
 
-def başvurular(request):
+def bassvurular(request):
     ogrencis = OgrenciBilgi.objects.all()
-    return render(request, 'başvurular.html',{'ogrencis':ogrencis})
+    return render(request, 'bassvurular.html',{'ogrencis':ogrencis})
 
-def tümbaşvurular(request):
+def tümbassvurular(request):
     ogrenciz = OgrenciBilgi.objects.all()
-    return render(request, 'tümbaşvurular.html',{'ogrenciz':ogrenciz})
+    return render(request, 'tümbassvurular.html',{'ogrenciz':ogrenciz})
 
-def kullanıcı(request):
-    return render(request, 'kullanıcı.html')
+def kullanici(request):
+    ogretmens = Ogretmen.objects.all()
+    return render(request, 'kullanici.html',{'ogretmens':ogretmens})
 
-def şifre(request):
-    return render(request, 'şifre.html')
+def sifre(request):
+    return render(request, 'sifre.html')
 
