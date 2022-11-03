@@ -20,7 +20,7 @@ class OgrenciBilgi(models.Model):
     ogrenci_ad = models.CharField("Ad",max_length=50)
     ogrenci_soyad = models.CharField("Soyad",max_length=50)
     ogrenci_eposta = models.EmailField("e-mail",)
-    ogrenci_telefon =  models.IntegerField("Telefon",blank=True, null=True)
+    epostaa = models.EmailField()
     #ogrenci_sifre = ağlamak
     ogrenci_fakulte = models.CharField("Fakülte",max_length=50)
     ogrenci_bolum = models.CharField("Bölüm",max_length=50)
@@ -91,6 +91,7 @@ class Ogretmen(models.Model):
     ogretmen_bolum = models.CharField("Bölüm",max_length=50)
     ogretmen_fakulte = models.CharField("Fakülte",max_length=50)
 
+
     def __str__(self):
         return f"{self.ogretmen_ad} {self.ogretmen_soyad}"
 
@@ -103,7 +104,7 @@ class Giris(models.Model):
     ogrenci_isim = models.ForeignKey(OgrenciBilgi, on_delete=models.CASCADE, null=True)
     ogretmen_isim = models.ForeignKey(Ogretmen, on_delete=models.CASCADE, null=True)
     password = models.CharField("Şifre",max_length=50)
-    epostaa = models.EmailField()
+    epostaa = models.EmailField(null=True)
 
     def __str__(self):
         return f"{self.no}"
