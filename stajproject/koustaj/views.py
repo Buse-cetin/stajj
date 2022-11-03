@@ -45,3 +45,10 @@ def kullanici(request):
 def sifre(request):
     return render(request, 'sifre.html')
 
+def ogrencibilgi(request):
+    return render(request, 'ogrencibilgi.html')
+
+def stajbilgilendirme(request):
+    return render(request, 'staj.html')
+    
+

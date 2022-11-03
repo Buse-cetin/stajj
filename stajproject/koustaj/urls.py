@@ -15,5 +15,8 @@ urlpatterns = [
     path("tümbassvurular.html", views.tümbassvurular),
     path("kullanici.html", views.kullanici ),
     path("sifre.html", views.sifre),
+    path("ogrencibilgi.html", views.ogrencibilgi),
+    path("staj.html", views.stajbilgilendirme),
+
     
 ]

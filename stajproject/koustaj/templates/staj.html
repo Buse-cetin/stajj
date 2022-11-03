@@ -1,0 +1,136 @@
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staj Bilgilendirme Sayfası</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lora&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/ogrenci.css'%}">
+</head>
+<body>
+    
+
+    <body id="body-pd">
+        <header class="header" id="header">
+            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+            <h2 style="color:darkgreen;">STAJ BAŞVURU SİSTEMİ/Öğrenci</h2>
+            <div class="header_img"> <img src="static/img/kou_logo.png" alt=""> </div>
+        </header>
+        {% include 'partials/_navbar.html' %}
+
+                <br><br><br>
+       
+                 
+                <br>
+              <div class="headline"><h2>Staj Dosyaları</h2></div>
+                <br>
+               <p>
+              <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                 <tr><th width="70%">Staj -I/II Çalışma Takvimi</th>
+                 <td align="center"><a href="static/doc/pdf/staj-I_II-takvimi.pdf"><img src ="static/img/PDF.svg.png" width="30px" height="30px"/></a></td></tr>
+              </table>
+             </p>
+               
+               <p>
+              <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                 <tr><th width="70%">İzlenecek Adımlar</th>
+                 <td align="center"><a href="static/doc/pdf/StajEsaslari_yeni.pdf"><img src ="static/img/PDF.svg.png" width="30px" height="30px"/></a></td></tr>
+
+              </table>
+             </p>
+             
+             <p>
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                   <tr><th width="70%">Staj Akış Diyagramı</th>
+                   <td align="center"><a href="static/doc/pdf/StajAkisDiyagrami.pdf"><img src ="static/img/PDF.svg.png" width="30px" height="30px"/></a></td></tr>
+                </table>
+               </p>
+               
+               <p>
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                   <tr><th width="70%">Staj I-II/İş Yeri Eğitimi Beyanı</th>
+                   <td align="center"><a href="static/doc/pdf/Staj-I_II-Isyeri-Egitimi-Beyani.pdf"><img src ="static/img/PDF.svg.png" width="30px" height="30px"/></a></td></tr>
+                </table>
+               </p>
+    
+               <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                <tr><th width="70%">Staj Değerlendirme Formu</th>
+                <td align="center"><a href="static/doc/doc/ime_DegerlendirmeFormu.doc"><img src ="static/img/docx.svg.png" width="30px" height="30px"/></a></td></tr>
+             </table>
+            </p>
+            
+            <p>
+             <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                <tr><th width="70%">Staj Raporu</th>
+                <td align="center"><a href="static/doc/doc/stajraporu.docx"><img src ="static/img/docx.svg.png" width="30px" height="30px"/></a></td></tr>
+             </table>
+            </p>
+            
+            <p>
+             <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                <tr><th width="70%">Sigorta Beyan Formu</th>
+                <td align="center"><a href="static/doc/pdf/sigorta-beyani.pdf"><img src ="static/img/PDF.svg.png" width="30px" height="30px"/></a></td></tr>
+             </table>
+            </p>
+            
+              <p>
+             <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                <tr><th width="70%">Devlet Katkı Talep Formu </th>
+                <td align="center"><a href="static/doc/xlsx/devletkatkitalepformu.xlsx"><img src ="static/img/xlsx.svg.png" width="30px" height="30px"/></a> </td></tr>
+             </table>
+            </p>
+     
+            <p>
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                   <tr><th width="70%">İME Yönergesi</th>
+                   <td align="center"><a href="static/doc/doc/ime_yonerge.doc"><img src ="static/img/docx.svg.png" width="30px" height="30px"/></a> </td></tr>
+                </table>
+               </p>
+    
+               <p>
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                   <tr><th width="70%">İME Denetim Formu</th>
+                   <td align="center"><a href="static/doc/doc/ime_Denetim Formu.doc"><img src ="static/img/docx.svg.png" width="30px" height="30px"/></a> </td></tr>
+                </table>
+               </p>
+    
+               <p>
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                   <tr><th width="70%">İME Rapor Yazım Kuralları</th>
+                   <td align="center"><a href="static/doc/doc/Ek4-RaporYazimKurallari.doc"><img src ="static/img/docx.svg.png" width="30px" height="30px"/></a> </td></tr>
+                </table>
+               </p>
+    
+               <p>
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" >
+                   <tr><th width="70%">İME Değerlendirme Formu</th>
+                   <td align="center"><a href="static/doc/doc/ime_DegerlendirmeFormu.doc"><img src ="static/img/docx.svg.png" width="30px" height="30px"/></a> </td></tr>
+                </table>
+               </p>
+        </div>
+    </div>
+        </div>
+    </div>
+    </div> 
+    
+    </div>
+     <br>
+    
+             
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{% static 'js/not.js'%}"></script>
+</body>
+</html>

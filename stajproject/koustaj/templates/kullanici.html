@@ -15,17 +15,16 @@
         <header class="header" id="header">
             <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
             <h2 style="color:darkgreen;">STAJ BAŞVURU SİSTEMİ/Öğretmen</h2>
-            <div class="header_img"> <img src="./images/WhatsApp Image 2022-10-26 at 22.47.54.jpeg" alt=""> </div>
+            <div class="header_img"> <img src="static/img/kou_logo.png" alt=""> </div>
         </header>
-        <div class="navbar" id="nav-bar">
+
             {% include 'partials/_navbarOgretmen.html' %}
-        </div> 
-        <!--Container Main start-->
-        <div class="height-100 bg-light">
-            <div style="padding-left:50px ;padding-top:170px ;padding-right: 350px;width:80% ;">
-                <table style="width: 100%; border-block-color: black; ">
-                    <tr style="font-size:x-large;height:70px;padding-left:10px;border:solid black;">
-                        <td  >AD: </td>
+
+        <div class="height-100 bg-light " align>
+            <div style="padding-left:50px ;padding-top:170px ;padding-right: 350px;width:80% ; margin-right=30px">
+                <table style="width: 100%; border-block-color: black;">
+                    <tr style="font-size:x-large;height:70px;padding-left:10px;border:solid #64bcbb;">
+                        <td style="color:darkgreen;" >Ad: </td>
                         <td>
                             <ul>
                               {% for Ogretmen in ogretmens %}
@@ -36,8 +35,8 @@
                             </ul>
                           </td>
                     </tr>
-                    <tr border:solid black;>
-                        <td>Soyad: </td>
+                    <tr style="font-size:x-large;height:70px;padding-left:10px;border:solid #64bcbb;">
+                        <td style="color:darkgreen;">Soyad: </td>
                         <td>
                             <ul>
                               {% for Ogretmen in ogretmens %}
@@ -48,8 +47,8 @@
                             </ul>
                           </td>
                         </tr>
-                    <tr border:solid black;>
-                        <td>Sicil No:</td> 
+                        <tr style="font-size:x-large;height:70px;padding-left:10px;border:solid #64bcbb;">
+                        <td style="color:darkgreen;">Sicil No:</td> 
                         <td>
                             <ul>
                               {% for Ogretmen in ogretmens %}
@@ -61,8 +60,8 @@
                           </td>
                         
                     </tr>
-                    <tr style="border:solid black;">
-                        <td>FAKÜLTE:</td>
+                    <tr style="font-size:x-large;height:70px;padding-left:10px;border:solid #64bcbb;">
+                        <td style="color:darkgreen;">Fakülte:</td>
                         <td>
                             <ul>
                               {% for Ogretmen in ogretmens %}
@@ -73,8 +72,8 @@
                             </ul>
                           </td>
                     </tr>
-                    <tr style="border:solid black;">
-                        <td>BÖLÜM:</td>
+                    <tr style="font-size:x-large;height:70px;padding-left:10px;border:solid #64bcbb;">
+                        <td style="color:darkgreen;">Bölüm:</td>
                         <td>
                             <ul>
                               {% for Ogretmen in ogretmens %}
@@ -85,8 +84,8 @@
                             </ul>
                           </td>
                     </tr>
-                    <tr style="border:solid black;">
-                        <td>E-POSTA:</td>
+                    <tr style="font-size:x-large;height:70px;padding-left:10px;border:solid #64bcbb;">
+                        <td style="color:darkgreen;">E-mail:</td>
                         <td>
                             <ul>
                               {% for Ogretmen in ogretmens %}
@@ -97,21 +96,7 @@
                             </ul>
                           </td>
                     </tr>
-                    <tr style="border:solid black;">
-                        <td>TELEFON:</td>
-                        <td>05555555555</td>
-            
-                    </tr>
-                </table>
-            </div>
-            <div style="padding-top:80px ;padding-left:350px;">
-                <button style="background-color:rgb(100, 129, 218) ;" type="button">GÜNCELLE</button>
-            </div>
-        
-        </div>
-        <!--Container Main end-->
-
-
+                    
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -1,0 +1,111 @@
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Bilgileri</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="{% static 'css/ogrenci.css'%}">
+</head>
+<body>
+    
+
+    <body id="body-pd">
+        <header class="header" id="header">
+            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+            <h2 style="color:darkgreen;">STAJ BAŞVURU SİSTEMİ/Öğrenci</h2>
+            <div class="header_img"> <img src="static/img/kou_logo.png" alt=""> </div>
+        </header>
+        {% include 'partials/_navbar.html' %}
+        </div>
+
+
+                <div class="container ">
+                    <header> Öğrenci Bilgileri</header>
+                      <form action="#">
+                           <div class="form-first">
+                             <div class="personal-details">
+                                    <span class="title"> Kişisel Bilgiler</span>
+                                    <div class="fields">
+                
+                                        <div class="input-fields">
+                                            <label>Ad-Soyad:  </label>
+                                              <input type="text" readonly>
+                                        </div>
+                                        <div class="input-fields">
+                                            <label>TC Kimlik No:  </label>
+                                              <input type="text" readonly>
+                                        </div>
+                                        <div class="input-fields">
+                                            <label>Doğum Yeri:</label>
+                                              <input type="text" readonly>
+                                        </div>
+                
+                                        <div class="input-fields">
+                                           <label>Öğrenci No:</label>
+                                             <input type="text" readonly>
+                                       </div>
+                                       <div class="input-fields">
+                                           <label>Doğum Tarihi:</label>
+                                             <input type="text" readonly>
+                                       </div>
+                                       <div class="input-fields">
+                                           <label>Kayıt Tarihi:</label>
+                                             <input type="text" readonly>
+                                       </div>
+                
+                                    </div>
+                             </div>
+                             
+                                 <br><br>
+                             <div class="education-details">
+                               <span class="title"> Eğitim Bilgileri</span>
+                               <div class="fields">
+                
+                                   <div class="input-fields">
+                                       <label>Fakülte :  </label>
+                                         <input type="text" readonly>
+                                   </div>
+                                   <div class="input-fields">
+                                       <label>Bölüm :  </label>
+                                         <input type="text" readonly>
+                                   </div>
+                                   <div class="input-fields">
+                                       <label>Sınıf :</label>
+                                         <input type="text" readonly>
+                                   </div>
+                
+                                   
+                
+                               </div>
+                               <br><br>
+                               <div class="com-details">
+                                  <span class="title"> İletişim Bilgileri</span>
+                                  <div class="fields">
+                   
+                                      <div class="input-fields">
+                                          <label>Cep Tel :  </label>
+                                            <input type="text" readonly>
+                                      </div>
+                                      <div class="input-fields">
+                                          <label>E-posta Adresi :  </label>
+                                            <input type="text" readonly>
+                                      </div>
+                                      <div class="input-fields">
+                                          <label>İkamet Adresi :</label>
+                                            <input type="text" readonly>
+                                      </div>
+                        </div>
+                           </div>
+                      </form>
+                   </div>
+                
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{% static 'js/not.js'%}"></script>
+
+</body>
+</html>

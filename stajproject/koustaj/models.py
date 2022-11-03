@@ -1,4 +1,5 @@
 from django.db import models
+#from django.contrib.auth import authenticate
 
 # Create your models here.
 
@@ -75,6 +76,7 @@ class Firma(models.Model):
     oBasvuru = models.ForeignKey(OgrenciBasvuru, on_delete=models.CASCADE, null=True)
     adres = models.CharField("Adres",max_length=250, null=True)
     oDegerlendirme = models.ForeignKey(Degerlendirme, on_delete=models.CASCADE, null=True)
+    #deneme= models.ForeignKey(auth_user, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
        return self.firma_adi 
