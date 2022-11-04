@@ -14,7 +14,7 @@
     <body id="body-pd">
         <header class="header" id="header">
             <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-            <h2 style="color:darkgreen;">STAJ BAŞVURU SİSTEMİ/Öğrenci</h2>
+            <h2 style="color:darkgreen;">STAJ BAŞVURU SİSTEMİ/Öğretmen</h2>
             <div class="header_img"> <img src="static/img/kou_logo.png" alt=""> </div>
         </header>
         {% include 'partials/_navbarOgretmen.html' %}
@@ -30,44 +30,54 @@
                         <th style="text-align:left ;">Değerlendirme</th>
                     </tr>
                 
-                 <tr>
-                    <td>
-                        <ul>
+                    <tr>
+                        <td>
+                          <ul>
                             {% for OgrenciBilgi in ogrencis %}
                                 <li>
-                                    {{ OgrenciBilgi.ogrenci_no }}
+                                    {{ OgrenciBilgi.ogrenci_no}}
                                 </li>
                             {% endfor %}
                         </ul>
-                    </td>
-                    <td>
-                        <ul>
+                        </td>
+                        <td>
+                          <ul>
                             {% for OgrenciBilgi in ogrencis %}
                                 <li>
                                     {{ OgrenciBilgi.ogrenci_ad }}
                                 </li>
                             {% endfor %}
                         </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            {% for OgrenciBilgi in ogrencis %}
-                                <li>
-                                    {{ OgrenciBilgi.ogrenci_soyad }}
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            {% for OgrenciBilgi in ogrencis %}
-                                <li>
-                                    {{ OgrenciBilgi.basvuru_dosyası }}
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </td>
-                    <td>
+                        </td>
+                        <td>
+                            <ul>
+                              {% for OgrenciBilgi in ogrencis %}
+                                  <li>
+                                      {{ OgrenciBilgi.ogrenci_soyad }}
+                                  </li>
+                              {% endfor %}
+                          </ul>
+                          </td>
+                          <td>
+                            <ul>
+                                {% for OgrenciBilgi in ogrencis %}
+                                    <li>
+                                        {{ OgrenciBilgi.basvuru_dosyası }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                {% for OgrenciBilgi in ogrencis %}
+                                    <li>
+                                        {{ OgrenciBilgi.odegerlendirme }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                        
+                     </tr>
                             <select  id="stajtipinegöre">
                                 <option style="text-decoration-style:lara ;">Değerlendir</option>
                                 <option>BAŞARILI</option>

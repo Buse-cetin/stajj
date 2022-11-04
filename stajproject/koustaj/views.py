@@ -51,4 +51,11 @@ def ogrencibilgi(request):
 def stajbilgilendirme(request):
     return render(request, 'staj.html')
     
+def listele(request):
+    ogrencix = OgrenciBilgi.objects.all()
+    return render(request, 'listele.html',{'ogrencix':ogrencix})
+
+def tümünülistele(request):
+    ogrenciy = OgrenciBilgi.objects.all()
+    return render(request, 'tümünülistele.html',{'ogrenciy':ogrenciy})
 
