@@ -1,0 +1,42 @@
+if(format(label)==labels[17]):      
+          
+# smtpx = Smmtp.objects.all()
+ #for s in smtpx :
+ messagex = Message.objects.all()
+ for m in messagex :
+
+ # usera = User.objects.all()
+# for s in usera :
+  
+  try:
+     # Mail Mesaj Bilgisi 
+     subcjet = m.subject
+     message = m.text
+     sendTo = "busecetin587@gmail.com"
+     #sendTo = m.users.email
+    
+    
+    # userd = User.objects.get()
+     #sendTo = [val for val in Message.objects.all() if val in userd.objects.all()]
+     content = "Subject: {0}\n\n{1}".format(subcjet,message)
+
+     myMailAdress = "buseetinn@gmail.com"
+     password = "zwgmhpyrfbtqnhlr"
+
+     # Kime Gönderilecek Bilgisi
+     #sendTo = m.users
+     #host, port
+     mail = SMTP("smtp.gmail.com", 587)
+     
+    # mail = SMTP("smtp.gmail.com", 587)
+     #sunucuya bağlanma
+     mail.ehlo()
+     #verileri şifreleme
+     mail.starttls()
+     #mail sunucusunda oturum açma
+     mail.login(myMailAdress,password)
+     #maili gönderme
+     mail.sendmail(myMailAdress, sendTo, content.encode("utf-8"))
+     print("Mail Gönderme İşlemi Başarılı!")
+  except Exception as e:
+     print("Hata Oluştu!\n {0}".format(e)) 
